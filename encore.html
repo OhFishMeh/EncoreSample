@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Encore Restaurant | Elegant Lunch, Dinner & Catering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Encore Restaurant – elegant black and gold dining for lunch dates, dinner dates, and premium catering."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg-main: #050509;
+      --bg-alt: #0b0b12;
+      --gold: #d4af37;
+      --gold-soft: #f1d27a;
+      --text-main: #f5f5f5;
+      --text-muted: #b3b3b3;
+      --accent: #8c6b1f;
+      --border-soft: rgba(212, 175, 55, 0.25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #151520 0, #050509 55%);
+      color: var(--text-main);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Layout */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 9, 0.98),
+        rgba(5, 5, 9, 0.9),
+        transparent
+      );
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .logo span {
+      color: var(--gold-soft);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--text-muted);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.25rem;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--gold);
+      color: var(--gold-soft);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      background: radial-gradient(circle at top left, #2b2210, #050509);
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 26px rgba(212, 175, 55, 0.4);
+      background: radial-gradient(circle at top left, #3a2c11, #050509);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    section {
+      padding: 4rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .section-heading {
+      font-family: "Playfair Display", serif;
+      font-size: 2.1rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      max-width: 540px;
+      font-size: 0.95rem;
+    }
+
+    /* Hero */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+      padding-top: 3.5rem;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold-soft);
+      background: rgba(5, 5, 9, 0.8);
+    }
+
+    .hero-tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle, var(--gold-soft), var(--gold));
+      box-shadow: 0 0 10px rgba(241, 210, 122, 0.7);
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+      margin: 1.25rem 0 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-title span {
+      color: var(--gold-soft);
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      max-width: 520px;
+      font-size: 0.98rem;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.75rem;
+      align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease,
+        background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+      color: #050509;
+      box-shadow: 0 0 22px rgba(212, 175, 55, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.7);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border-color: var(--border-soft);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold-soft);
+      color: var(--gold-soft);
+      background: rgba(212, 175, 55, 0.06);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top, #2a2214, #050509);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: saturate(1.1) contrast(1.05);
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 1.2rem;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      background: rgba(5, 5, 9, 0.85);
+      border: 1px solid var(--border-soft);
+      font-size: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .hero-badge span:first-child {
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+    }
+
+    .hero-badge span:last-child {
+      color: var(--text-muted);
+      font-size: 0.7rem;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-top: 1rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.75rem;
+    }
+
+    .about-pill {
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      font-size: 0.8rem;
+      color: var(--gold-soft);
+      background: rgba(5, 5, 9, 0.8);
+    }
+
+    .about-image-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top, #2a2214, #050509);
+    }
+
+    /* Experiences */
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .experience-card {
+      padding: 1.5rem;
+      border-radius: 18px;
+      background: radial-gradient(circle at top left, #151018, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .experience-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+    }
+
+    .experience-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Menu */
+
+    .menu-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      margin-top: 2rem;
+      align-items: flex-start;
+    }
+
+    .menu-list {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .menu-item {
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    }
+
+    .menu-item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+    }
+
+    .menu-item-name {
+      font-weight: 500;
+      font-size: 0.98rem;
+    }
+
+    .menu-item-price {
+      font-size: 0.9rem;
+      color: var(--gold-soft);
+    }
+
+    .menu-item-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .menu-note {
+      margin-top: 1.25rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .menu-image-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top, #2a2214, #050509);
+    }
+
+    .menu-cta {
+      margin-top: 1.5rem;
+    }
+
+    /* Catering */
+
+    .catering-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      margin-top: 2rem;
+      align-items: center;
+    }
+
+    .catering-list {
+      list-style: none;
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .catering-list li::before {
+      content: "• ";
+      color: var(--gold-soft);
+    }
+
+    .catering-badge {
+      display: inline-flex;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold-soft);
+      margin-top: 1.25rem;
+    }
+
+    .catering-image-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      background: radial-gradient(circle at top, #2a2214, #050509);
+    }
+
+    /* Gallery */
+
+    .gallery-grid {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      background: #111;
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(5, 5, 9, 0.7),
+        transparent 40%
+      );
+    }
+
+    .gallery-label {
+      position: absolute;
+      left: 0.8rem;
+      bottom: 0.7rem;
+      z-index: 2;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold-soft);
+    }
+
+    /* Visit / Contact */
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .hours-list {
+      list-style: none;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .map-placeholder {
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      padding: 1.2rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: radial-gradient(circle at top, #151520, #050509);
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: #050509;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-soft);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero,
+      .about-grid,
+      .menu-layout,
+      .catering-grid,
+      .visit-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+
+      .hero-title {
+        font-size: 2.4rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      main {
+        padding: 1.25rem;
+      }
+
+      section {
+        padding: 3rem 0;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-title {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="nav">
+      <div class="logo">ENCORE <span>RESTAURANT</span></div>
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#experiences">Dining</a>
+        <a href="#menu">Menu</a>
+        <a href="#catering">Catering</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#contact" class="nav-cta">Reserve Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero">
+        <div>
+          <div class="hero-tag">
+            <span class="hero-tag-dot"></span>
+            ENCORE RESTAURANT · BLACK & GOLD
+          </div>
+          <h1 class="hero-title">
+            Where Every Meal<br />
+            Becomes an <span>Encore</span>
+          </h1>
+          <p class="hero-subtitle">
+            Elegant black-and-gold dining for lunch dates, candlelit dinners, and
+            unforgettable catering—crafted for those who believe every moment
+            deserves a standing ovation.
+          </p>
+          <div class="hero-cta-row">
+            <a href="#contact" class="btn-primary">Reserve a Table</a>
+            <a href="#menu" class="btn-secondary">View Menu</a>
+            <a href="#catering" class="btn-secondary">Book Catering</a>
+          </div>
+          <p class="hero-note">
+            Open daily for lunch and dinner · Catering available by appointment.
+          </p>
+        </div>
+        <div class="hero-image-wrap">
+          <!-- Hero image (night interior, black & gold) -->
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80"
+            alt="Elegant black and gold restaurant interior at night"
+          />
+          <div class="hero-badge">
+            <span>Night Dining</span>
+            <span>Perfect for dates, celebrations, and private evenings.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-heading">About Encore</h2>
+          <p>
+            Encore Restaurant is designed as a stage for connection—where every
+            plate, every glass, and every conversation feels intentional. By day,
+            we welcome relaxed lunch dates and business meetups. By night, the
+            lights dim, the candles glow, and the room transforms into an
+            intimate, elegant setting for unforgettable dinners.
+          </p>
+          <p>
+            Our chefs blend classic techniques with modern creativity, using
+            fresh, seasonal ingredients to craft dishes that are both familiar
+            and surprising. Whether you’re joining us for a quiet lunch, a
+            romantic evening, or a fully catered celebration, Encore is where
+            the night begins—and where memories ask for an encore.
+          </p>
+          <div class="about-highlights">
+            <div class="about-pill">Lunch & Dinner Dates</div>
+            <div class="about-pill">Elegant Night Atmosphere</div>
+            <div class="about-pill">Premium Catering Services</div>
+            <div class="about-pill">Black & Gold Signature Style</div>
+          </div>
+        </div>
+        <div class="about-image-wrap">
+          <!-- Chef / plating image -->
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80"
+            alt="Chef plating an elegant dish under warm golden lighting"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section id="experiences">
+      <h2 class="section-heading">Lunch & Dinner Experiences</h2>
+      <p class="section-subtitle">
+        From mid-day conversations to late-night celebrations, Encore offers
+        distinct experiences tailored to the rhythm of your day.
+      </p>
+      <div class="experience-grid">
+        <div class="experience-card">
+          <h3>Lunch at Encore</h3>
+          <p>
+            Bright flavors, fresh ingredients, and a relaxed atmosphere make
+            Encore the perfect setting for lunch dates, business meetings, or a
+            quiet solo escape. Enjoy thoughtfully crafted dishes that energize
+            without rushing you out the door.
+          </p>
+        </div>
+        <div class="experience-card">
+          <h3>Dinner at Encore</h3>
+          <p>
+            As the sun sets, Encore shifts into a romantic, candlelit space with
+            soft music, warm golden light, and elegantly plated entrées. Ideal
+            for anniversaries, first dates, and nights that deserve to be
+            remembered.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu">
+      <h2 class="section-heading">Encore Menu Highlights</h2>
+      <p class="section-subtitle">
+        A curated selection of guest favorites—crafted to impress at both lunch
+        and dinner. Ask your server for seasonal specials and wine pairings.
+      </p>
+      <div class="menu-layout">
+        <div>
+          <div class="menu-list">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-item-name">Garlic Herb Steak</span>
+                <span class="menu-item-price">$34</span>
+              </div>
+              <p class="menu-item-desc">
+                Tender, grilled steak finished with garlic herb butter, served
+                with roasted seasonal vegetables and a red wine reduction.
+              </p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-item-name">Creamy Tuscan Chicken</span>
+                <span class="menu-item-price">$28</span>
+              </div>
+              <p class="menu-item-desc">
+                Pan-seared chicken in a rich parmesan cream sauce with
+                sun-dried tomatoes, spinach, and fresh herbs.
+              </p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-item-name">Lemon Butter Salmon</span>
+                <span class="menu-item-price">$30</span>
+              </div>
+              <p class="menu-item-desc">
+                Fresh, flaky salmon with a bright lemon butter glaze, served
+                over herbed risotto and grilled asparagus.
+              </p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-item-name">Truffle Alfredo Pasta</span>
+                <span class="menu-item-price">$26</span>
+              </div>
+              <p class="menu-item-desc">
+                Silky house-made alfredo infused with truffle, tossed with
+                fettuccine and finished with shaved parmesan.
+              </p>
+            </div>
+          </div>
+          <p class="menu-note">
+            Full menu available in-house. Vegetarian, vegan, and gluten-free
+            options are available upon request.
+          </p>
+          <div class="menu-cta">
+            <a href="#contact" class="btn-primary">Inquire About Full Menu</a>
+          </div>
+        </div>
+        <div class="menu-image-wrap">
+          <!-- Food close-up image -->
+          <img
+            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=80"
+            alt="Gourmet dishes under dramatic lighting with black and gold accents"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CATERING -->
+    <section id="catering">
+      <h2 class="section-heading">Catering by Encore</h2>
+      <p class="section-subtitle">
+        Bring the elegance of Encore to your event—whether it’s an intimate
+        gathering or a grand celebration.
+      </p>
+      <div class="catering-grid">
+        <div>
+          <p>
+            Our catering team designs each event with the same care and detail
+            as our in-restaurant experience. From menu planning to on-site
+            service, we ensure every course, every table, and every moment feels
+            intentional and refined.
+          </p>
+          <ul class="catering-list">
+            <li>Customizable menus for weddings, corporate events, and parties</li>
+            <li>Full-service staff for setup, service, and breakdown</li>
+            <li>Elegant black-and-gold presentation and décor accents</li>
+            <li>On-site coordination to keep your event seamless</li>
+            <li>Delivery and drop-off options for more casual gatherings</li>
+          </ul>
+          <div class="catering-badge">Now accepting bookings for 2026 events</div>
+          <div style="margin-top: 1.5rem;">
+            <a href="#contact" class="btn-secondary">Request Catering Quote</a>
+          </div>
+        </div>
+        <div class="catering-image-wrap">
+          <!-- Catering table image -->
+          <img
+            src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1000&q=80"
+            alt="Elegant catering table with black and gold décor and candles"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <h2 class="section-heading">Gallery</h2>
+      <p class="section-subtitle">
+        A glimpse into the Encore experience—romantic tables, night-time
+        ambiance, and dishes that deserve the spotlight.
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80"
+            alt="Romantic dinner table for two with candles and wine"
+          />
+          <div class="gallery-label">Dinner Dates</div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80"
+            alt="Night-time restaurant interior with warm golden lighting"
+          />
+          <div class="gallery-label">Night Atmosphere</div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1546069901-5ec6a79120b0?auto=format&fit=crop&w=800&q=80"
+            alt="Gourmet plated dish under dramatic lighting"
+          />
+          <div class="gallery-label">Signature Dishes</div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1521017432531-8b0a5e52f36a?auto=format&fit=crop&w=800&q=80"
+            alt="Catering event with elegant table setup"
+          />
+          <div class="gallery-label">Catering Events</div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80"
+            alt="Chef preparing food in a professional kitchen"
+          />
+          <div class="gallery-label">Behind the Scenes</div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=800&q=80"
+            alt="Dessert with gold accents on a dark plate"
+          />
+          <div class="gallery-label">Desserts</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section id="visit">
+      <h2 class="section-heading">Visit Encore</h2>
+      <p class="section-subtitle">
+        Join us in person for lunch, dinner, or a private tasting to plan your
+        next catered event.
+      </p>
+      <div class="visit-grid">
+        <div>
+          <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.14em; margin-top: 1.5rem;">
+            Hours
+          </h3>
+          <ul class="hours-list">
+            <li><strong>Lunch:</strong> 11:00 AM – 3:00 PM</li>
+            <li><strong>Dinner:</strong> 5:00 PM – 11:00 PM</li>
+            <li><strong>Catering:</strong> By appointment</li>
+          </ul>
+
+          <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.14em; margin-top: 1.5rem;">
+            Location
+          </h3>
+          <p style="margin-top: 0.4rem; font-size: 0.9rem; color: var(--text-muted);">
+            Encore Restaurant<br />
+            [Your Street Address]<br />
+            [City, State ZIP]
+          </p>
+        </div>
+        <div class="map-placeholder">
+          <strong>Map & Directions</strong>
+          <p style="margin-top: 0.4rem;">
+            Embed your Google Maps iframe here to help guests find Encore
+            Restaurant easily.
+          </p>
+          <p style="margin-top: 0.6rem; font-size: 0.8rem;">
+            Tip: In Google Maps, search your restaurant, click “Share” →
+            “Embed a map”, then paste the iframe code here.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-heading">Reservations & Inquiries</h2>
+      <p class="section-subtitle">
+        Ready to book a table, plan a date night, or schedule catering? Reach
+        out and our team will respond promptly.
+      </p>
+      <div class="visit-grid" style="margin-top: 2rem;">
+        <div>
+          <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.14em;">
+            Contact Details
+          </h3>
+          <ul class="contact-list">
+            <li><strong>Phone:</strong> (000) 000-0000</li>
+            <li><strong>Email:</strong> reservations@encorerestaurant.com</li>
+            <li><strong>Catering:</strong> catering@encorerestaurant.com</li>
+            <li><strong>Social:</strong> @encorerestaurant on Instagram & Facebook</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.14em;">
+            Quick Reservation Form
+          </h3>
+          <form
+            style="
+              margin-top: 0.8rem;
+              display: grid;
+              gap: 0.7rem;
+              font-size: 0.85rem;
+            "
+          >
+            <input
+              type="text"
+              placeholder="Full Name"
+              required
+              style="
+                padding: 0.7rem 0.9rem;
+                border-radius: 999px;
+                border: 1px solid var(--border-soft);
+                background: rgba(5, 5, 9, 0.9);
+                color: var(--text-main);
+              "
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              required
+              style="
+                padding: 0.7rem 0.9rem;
+                border-radius: 999px;
+                border: 1px solid var(--border-soft);
+                background: rgba(5, 5, 9, 0.9);
+                color: var(--text-main);
+              "
+            />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              style="
+                padding: 0.7rem 0.9rem;
+                border-radius: 999px;
+                border: 1px solid var(--border-soft);
+                background: rgba(5, 5, 9, 0.9);
+                color: var(--text-main);
+              "
+            />
+            <input
+              type="text"
+              placeholder="Preferred Date & Time"
+              style="
+                padding: 0.7rem 0.9rem;
+                border-radius: 999px;
+                border: 1px solid var(--border-soft);
+                background: rgba(5, 5, 9, 0.9);
+                color: var(--text-main);
+              "
+            />
+            <select
+              style="
+                padding: 0.7rem 0.9rem;
+                border-radius: 999px;
+                border: 1px solid var(--border-soft);
+                background: rgba(5, 5, 9, 0.9);
+                color: var(--text-main);
+              "
+            >
+              <option value="">Reservation Type</option>
+              <option>Lunch Date</option>
+              <option>Dinner Date</option>
+              <option>Catering Inquiry</option>
+              <option>Private Event</option>
+            </select>
+            <textarea
+              rows="3"
+              placeholder="Additional details (optional)"
+              style="
+                padding: 0.7rem 0.9rem;
+                border-radius: 16px;
+                border: 1px solid var(--border-soft);
+                background: rgba(5, 5, 9, 0.9);
+                color: var(--text-main);
+                resize: vertical;
+              "
+            ></textarea>
+            <button type="submit" class="btn-primary">Submit Request</button>
+          </form>
+          <p style="margin-top: 0.6rem; font-size: 0.8rem; color: var(--text-muted);">
+            Note: Connect this form to your email or booking system in your
+            website platform settings.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Encore Restaurant. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#catering">Catering</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
